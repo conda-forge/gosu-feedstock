@@ -20,14 +20,16 @@ get out of the pipeline".
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/gosu-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/gosu-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/gosu-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/gosu-feedstock)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/gosu/badges/version.svg)](https://anaconda.org/conda-forge/gosu)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/gosu/badges/downloads.svg)](https://anaconda.org/conda-forge/gosu)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gosu-green.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) |
 
 Installing gosu
 ===============
