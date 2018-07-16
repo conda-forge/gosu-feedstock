@@ -16,7 +16,7 @@ source:
     folder: src/github.com/opencontainers/runc
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
 
 requirements:
