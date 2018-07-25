@@ -1,6 +1,5 @@
 {% set version = "1.10" %}
 {% set runc_version = "0.1.0" %}
-{% set sha256 = "bcbe8ada8c435a253b1fa438f505dd311832a88f52316fd7d30342b106a4242c" %}
 
 package:
   name: gosu
@@ -8,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/tianon/gosu/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+    sha256: bcbe8ada8c435a253b1fa438f505dd311832a88f52316fd7d30342b106a4242c
     folder: src/github.com/tianon/gosu
 
   - url: https://github.com/opencontainers/runc/archive/v{{ runc_version }}.tar.gz
