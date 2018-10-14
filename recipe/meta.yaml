@@ -8,13 +8,13 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://github.com/tianon/gosu/archive/{{ version }}.tar.gz
+  - folder: src/github.com/tianon/gosu
+    url: https://github.com/tianon/gosu/archive/{{ version }}.tar.gz
     sha256: {{ sha256 }}
-    folder: src/github.com/tianon/gosu
 
-  - url: https://github.com/opencontainers/runc/archive/v{{ runc_version }}.tar.gz
+  - folder: src/github.com/opencontainers/runc
+    url: https://github.com/opencontainers/runc/archive/v{{ runc_version }}.tar.gz
     sha256: {{ runc_sha256 }}
-    folder: src/github.com/opencontainers/runc
 
 build:
   number: 1
