@@ -1,6 +1,6 @@
 {% set version = "1.10" %}
-{% set runc_version = "0.1.0" %}
 {% set sha256 = "bcbe8ada8c435a253b1fa438f505dd311832a88f52316fd7d30342b106a4242c" %}
+{% set runc_version = "0.1.0" %}
 {% set runc_sha256 = "78ae42905c0f26fcfa9353e48e1a001b5b5c3c94b33e2ceacc6bc84c23c61a88" %}
 
 package:
