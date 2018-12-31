@@ -1,7 +1,7 @@
 {% set version = "1.11" %}
 {% set sha256 = "d03208fd7ef983e4a606f861a5efcdc5a1980952a91febba3f67057800da6701" %}
-{% set runc_version = "0.1.0" %}
-{% set runc_sha256 = "78ae42905c0f26fcfa9353e48e1a001b5b5c3c94b33e2ceacc6bc84c23c61a88" %}
+{% set runc_version = "1.0.0-rc5" %}
+{% set runc_sha256 = "770e180d1cca1f3c1a67512ebf9720caafe97af4fc2fe12fa43a3cf7bfa77522" %}
 
 package:
   name: gosu
