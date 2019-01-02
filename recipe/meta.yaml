@@ -1,24 +1,31 @@
+{% set goname = "github.com/golang/dep" %}
 {% set version = "1.11" %}
-{% set sha256 = "d03208fd7ef983e4a606f861a5efcdc5a1980952a91febba3f67057800da6701" %}
+# The runc version much match the upstream Dockerfile
+# https://github.com/tianon/gosu/blob/master/Dockerfile
 {% set runc_version = "1.0.0-rc5" %}
-{% set runc_sha256 = "770e180d1cca1f3c1a67512ebf9720caafe97af4fc2fe12fa43a3cf7bfa77522" %}
+
+{% set name = goname.split('/')[-1] %}
+{% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
 
 package:
-  name: gosu
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  - folder: src/github.com/tianon/gosu
-    url: https://github.com/tianon/gosu/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  - folder: {{ pkg_src }}
+    url: https://{{pkg_src}}/archive/{{ version }}.tar.gz
+    sha256: d03208fd7ef983e4a606f861a5efcdc5a1980952a91febba3f67057800da6701
 
   - folder: src/github.com/opencontainers/runc
     url: https://github.com/opencontainers/runc/archive/v{{ runc_version }}.tar.gz
-    sha256: {{ runc_sha256 }}
+    sha256: 770e180d1cca1f3c1a67512ebf9720caafe97af4fc2fe12fa43a3cf7bfa77522
 
 build:
   number: 1000
   skip: true  # [not linux]
+  script:
+    - pushd {{ pkg_src }}
+    - go install -v -ldflags '-d -s -w'
 
 requirements:
   build:
@@ -26,10 +33,10 @@ requirements:
 
 test:
   commands:
-    - which gosu
-
-    # No real help option, but try anyways.
-    - gosu --help || true
+    - test -x $PREFIX/bin/gosu
+    - gosu --version
+    - gosu nobody id;
+    - gosu nobody ls -l /proc/self/fd
 
 about:
   home: https://github.com/tianon/gosu
@@ -51,3 +58,4 @@ about:
 extra:
   recipe-maintainers:
     - jakirkham
+    - sodre
