@@ -1,5 +1,5 @@
-About dep
-=========
+About gosu
+==========
 
 [![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
@@ -31,27 +31,27 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-dep-green.svg)](https://anaconda.org/conda-forge/dep) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dep.svg)](https://anaconda.org/conda-forge/dep) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dep.svg)](https://anaconda.org/conda-forge/dep) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dep.svg)](https://anaconda.org/conda-forge/dep) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gosu-green.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gosu.svg)](https://anaconda.org/conda-forge/gosu) |
 
-Installing dep
-==============
+Installing gosu
+===============
 
-Installing `dep` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `gosu` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `dep` can be installed with:
+Once the `conda-forge` channel has been enabled, `gosu` can be installed with:
 
 ```
-conda install dep
+conda install gosu
 ```
 
-It is possible to list all of the versions of `dep` available on your platform with:
+It is possible to list all of the versions of `gosu` available on your platform with:
 
 ```
-conda search dep --channel conda-forge
+conda search gosu --channel conda-forge
 ```
 
 
@@ -91,17 +91,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating dep-feedstock
-======================
+Updating gosu-feedstock
+=======================
 
-If you would like to improve the dep recipe or build a new
+If you would like to improve the gosu recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/dep-feedstock are
+Note that all branches in the conda-forge/gosu-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
