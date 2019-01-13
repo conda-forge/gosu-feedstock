@@ -2,13 +2,13 @@
 {% set version = "1.11" %}
 
 {% set name = goname.split('/')[-1] %}
-{% set pkg_src = ('src/'+goname).replace("/","\\" if win else "/") %}
+{% set pkg_src = 'src/'+goname %}
 
 # The runc version much match the upstream Dockerfile
 # https://github.com/tianon/gosu/blob/master/Dockerfile
 {% set runc_goname = "github.com/opencontainers/runc" %}
 {% set runc_version = "1.0.0-rc5" %}
-{% set runc_pkg_src = ('src/'+runc_goname).replace("/", "\\" if win else "/") %}
+{% set runc_pkg_src = 'src/'+runc_goname %}
 
 package:
   name: {{ name }}
@@ -37,6 +37,7 @@ requirements:
 
 test:
   commands:
+    - which gosu
     - test -x $PREFIX/bin/gosu
     - gosu --version
 
