@@ -3,7 +3,7 @@ About gosu
 
 Home: https://github.com/tianon/gosu
 
-Package license: GPL-3
+Package license: GPL-3.0-or-later
 
 Feedstock license: BSD-3-Clause
 
