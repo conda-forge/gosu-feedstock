@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/tianon/gosu
-  license: GPL-3
+  license: GPL-3.0-or-later
   license_file: src/github.com/tianon/gosu/LICENSE
   summary: Simple Go-based setuid+setgid+setgroups+exec
 
