@@ -7,7 +7,7 @@
 # The runc version much match the upstream Dockerfile
 # https://github.com/tianon/gosu/blob/master/Dockerfile
 {% set runc_goname = "github.com/opencontainers/runc" %}
-{% set runc_version = "1.0.0-rc5" %}
+{% set runc_version = "1.0.1" %}
 {% set runc_pkg_src = 'src/'+runc_goname %}
 
 package:
