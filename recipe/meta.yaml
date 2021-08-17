@@ -1,5 +1,5 @@
 {% set goname = "github.com/tianon/gosu" %}
-{% set version = "1.11" %}
+{% set version = "1.14" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = 'src/'+goname %}
@@ -7,7 +7,7 @@
 # The runc version much match the upstream Dockerfile
 # https://github.com/tianon/gosu/blob/master/Dockerfile
 {% set runc_goname = "github.com/opencontainers/runc" %}
-{% set runc_version = "1.0.0-rc5" %}
+{% set runc_version = "1.0.1" %}
 {% set runc_pkg_src = 'src/'+runc_goname %}
 
 package:
@@ -17,14 +17,14 @@ package:
 source:
   - folder: {{ pkg_src }}
     url: https://{{ goname }}/archive/{{ version }}.tar.gz
-    sha256: d03208fd7ef983e4a606f861a5efcdc5a1980952a91febba3f67057800da6701
+    sha256: 1bef92674a09a9f35efa9ef14ee06c01101e586266641f6ffb5613cd726db143
 
   - folder: {{ runc_pkg_src }}
     url: https://{{ runc_goname }}/archive/v{{ runc_version }}.tar.gz
-    sha256: 770e180d1cca1f3c1a67512ebf9720caafe97af4fc2fe12fa43a3cf7bfa77522
+    sha256: b25e4273a895af3239bc5e495a007266356038adfb34c4b94b4fc39627a89ad9
 
 build:
-  number: 1000
+  number: 0
   skip: true  # [not linux]
   script:
     - pushd {{ pkg_src }}
@@ -47,8 +47,7 @@ test:
 
 about:
   home: https://github.com/tianon/gosu
-  license: GPL-3
-  license_family: GPL
+  license: Apache-2.0
   license_file: src/github.com/tianon/gosu/LICENSE
   summary: Simple Go-based setuid+setgid+setgroups+exec
 
