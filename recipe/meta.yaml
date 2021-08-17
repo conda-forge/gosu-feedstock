@@ -47,8 +47,7 @@ test:
 
 about:
   home: https://github.com/tianon/gosu
-  license: GPL-3
-  license_family: GPL
+  license: Apache-2.0
   license_file: src/github.com/tianon/gosu/LICENSE
   summary: Simple Go-based setuid+setgid+setgroups+exec
 
