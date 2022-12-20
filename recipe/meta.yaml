@@ -1,5 +1,5 @@
 {% set goname = "github.com/tianon/gosu" %}
-{% set version = "1.14" %}
+{% set version = "1.16" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = 'src/'+goname %}
@@ -7,7 +7,7 @@
 # The runc version much match the upstream Dockerfile
 # https://github.com/tianon/gosu/blob/master/Dockerfile
 {% set runc_goname = "github.com/opencontainers/runc" %}
-{% set runc_version = "1.0.1" %}
+{% set runc_version = "1.1.0" %}
 {% set runc_pkg_src = 'src/'+runc_goname %}
 
 package:
@@ -17,11 +17,11 @@ package:
 source:
   - folder: {{ pkg_src }}
     url: https://{{ goname }}/archive/{{ version }}.tar.gz
-    sha256: 1bef92674a09a9f35efa9ef14ee06c01101e586266641f6ffb5613cd726db143
+    sha256: cf34530b74f1fc3b8db2f8918eb6864177416b5f4b699a1e4ed3cb488c7fdf15
 
   - folder: {{ runc_pkg_src }}
     url: https://{{ runc_goname }}/archive/v{{ runc_version }}.tar.gz
-    sha256: b25e4273a895af3239bc5e495a007266356038adfb34c4b94b4fc39627a89ad9
+    sha256: a8de57edbf0ff741ea798ccdd99ac0e1b79914f552871bd7cd92b0569f200964
 
 build:
   number: 0
