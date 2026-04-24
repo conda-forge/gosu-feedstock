@@ -24,7 +24,7 @@ source:
     sha256: a8de57edbf0ff741ea798ccdd99ac0e1b79914f552871bd7cd92b0569f200964
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   script:
     - pushd {{ pkg_src }}
