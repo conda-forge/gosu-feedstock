@@ -1,5 +1,5 @@
 {% set goname = "github.com/tianon/gosu" %}
-{% set version = "1.17" %}
+{% set version = "1.20" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = 'src/'+goname %}
@@ -17,7 +17,7 @@ package:
 source:
   - folder: {{ pkg_src }}
     url: https://{{ goname }}/archive/{{ version }}.tar.gz
-    sha256: d984938705b81b90468a9f471adfdffeffaebd9deeac752d3e3a6060425b5d0d
+    sha256: 207a2045e890d3ca3326027c5f585733085960b401a49dbc00e3bb628c054cf8
 
   - folder: {{ runc_pkg_src }}
     url: https://{{ runc_goname }}/archive/v{{ runc_version }}.tar.gz
